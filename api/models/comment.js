@@ -3,7 +3,7 @@ const {
   Model
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
-  class Comments extends Model {
+  class Comment extends Model {
     
     static associate(models) {
       Comment.belongsTo(models.User,{
@@ -14,7 +14,7 @@ module.exports = (sequelize, DataTypes) => {
       })
     }
   }
-  Comments.init({
+  Comment.init({
     content: DataTypes.TEXT,
     userId: {
       type:DataTypes.INTEGER,
@@ -38,7 +38,8 @@ module.exports = (sequelize, DataTypes) => {
     likeCount: DataTypes.INTEGER
   }, {
     sequelize,
-    modelName: 'Comments',
+    modelName: 'Comment',
+    tableName: 'comments'
   });
-  return Comments;
+  return Comment;
 };
