@@ -16,7 +16,15 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Post.init({
-    userId: DataTypes.INTEGER,
+    userId: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      onDelete: 'CASCADE',
+      references: {
+        model: 'users',
+        key: 'id',
+      },
+    },
     caption: DataTypes.STRING,
     likeCount: DataTypes.INTEGER,
     image: DataTypes.STRING
