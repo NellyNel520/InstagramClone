@@ -14,7 +14,7 @@ module.exports = {
         allowNull: false,
       },
       caption: {
-        type: Sequelize.STRING
+        type: Sequelize.TEXT
       },
       likeCount: {
         type: Sequelize.INTEGER

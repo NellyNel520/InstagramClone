@@ -25,7 +25,7 @@ module.exports = (sequelize, DataTypes) => {
         key: 'id',
       },
     },
-    caption: DataTypes.STRING,
+    caption: DataTypes.TEXT,
     likeCount: DataTypes.INTEGER,
     image: DataTypes.STRING
   }, {

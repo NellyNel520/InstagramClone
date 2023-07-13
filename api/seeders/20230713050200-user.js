@@ -7,7 +7,6 @@ const users = [...Array(50)].map(() => ({
   fullName: falso.randFullName(),
   email: falso.randEmail(),
   passwordDigest: falso.randPassword(),
-  age: falso.randNumber({ min: 15, max: 110 }),
   birthDate: falso.randBetweenDate({ from: new Date('01/01/1950'), to: new Date('12/31/2015') }),
   profilePic: falso.randImg(), 
   city: falso.randCity(),
