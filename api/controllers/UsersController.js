@@ -30,6 +30,17 @@ const GetUserByEmail = async (req, res) => {
   }
 }
 
+const GetUserById = async (req, res) => {
+  try {
+    const id = req.params.id
+    console.log(email)
+    let data = await User.findOne({ where: { id: id } })
+    res.send(data)
+  } catch (error) {
+    throw error
+  }
+}
+
 const GetUserByUsername = async (req, res) => {
   try {
     const username = req.params.username
@@ -86,6 +97,7 @@ const DeleteUser = async (req, res) => {
 module.exports = {
   GetUserByEmail,
   GetUserByUsername,
+  GetUserById,
   GetAllUsers,
   GetUser,
   CreateUser,
