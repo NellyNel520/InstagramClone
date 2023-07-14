@@ -1,30 +1,87 @@
-export const USERS = [
+import { USERS } from './users'
+export const POSTS = [
 	{
-		user: 'sugarBabie',
-		comment: 'Wow, this photo is giving me major wanderlust vibes! I need to add this place to my bucket list ASAP!',
+		imageUrl: 'https://images.unsplash.com/photo-1509281373149-e957c6296406?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cmFuZG9tfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60',
+		user: USERS[0].user,
+		likes: 7870,
+		caption: 'Invent your world. Surround yourself with people, color, sounds, and work that nourish you.',
+		profilePic: USERS[0].image,
+		comments: [
+			{
+				user: 'Ragnar.Mahlangu5',
+				comment: 'The fashion game is strong in this one! You always manage to slay every outfit. Teach me your style secrets, please!',
+			},
+			{
+				user: 'Manfred.David81',
+				comment: 'fire bro',
+			},
+			{
+				user: 'Bin.Green42',
+				comment: 'This picture is pure art! The composition and colors are absolutely stunning. You have such a great eye for photography!',
+			},
+		]
 	},
-  {
-		user: 'nellyNel520',
-		comment: 'This picture is pure art! The composition and colors are absolutely stunning. You have such a great eye for photography!',
+	{
+		imageUrl: 'https://plus.unsplash.com/premium_photo-1669741908308-5ca216f3fcd1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cGVyc29ufGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60',
+		user: USERS[1].user,
+		likes: 7870,
+		caption: 'Invent your world. Surround yourself with people, color, sounds, and work that nourish you.',
+		profilePic: USERS[1].image,
+		comments: [
+			{
+				user: 'Ragnar.Mahlangu5',
+				comment: 'The fashion game is strong in this one! You always manage to slay every outfit. Teach me your style secrets, please!',
+			},
+			{
+				user: 'Manfred.David81',
+				comment: 'fire bro',
+			},
+			{
+				user: 'Bin.Green42',
+				comment: 'This picture is pure art! The composition and colors are absolutely stunning. You have such a great eye for photography!',
+			},
+		]
 	},
-  {
-		user: 'markTwane33',
-		comment: 'I cant help but smile every time I see your posts. Your positive energy is contagious! Keep spreading the joy!',
+	{
+		imageUrl: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cGVyc29ufGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60',
+		user: USERS[2].user,
+		likes: 7870,
+		caption: 'Invent your world. Surround yourself with people, color, sounds, and work that nourish you.',
+		profilePic: USERS[2].image,
+		comments: [
+			{
+				user: 'Ragnar.Mahlangu5',
+				comment: 'The fashion game is strong in this one! You always manage to slay every outfit. Teach me your style secrets, please!',
+			},
+			{
+				user: 'Manfred.David81',
+				comment: 'fire bro',
+			},
+			{
+				user: 'Bin.Green42',
+				comment: 'This picture is pure art! The composition and colors are absolutely stunning. You have such a great eye for photography!',
+			},
+		]
 	},
-  {
-		user: 'AtypicalGal',
-		comment: 'The fashion game is strong in this one! You always manage to slay every outfit. Teach me your style secrets, please!',
-	},
-  {
-		user: 'DaDonDaDa_blala',
-		comment: 'This post is giving me major food envy! That dish looks incredibly delicious. Can I get the recipe?',
-	},
-  {
-		user: 'Karen33',
-		comment: 'This photo captures the essence of summer perfectly! Makes me want to jump into the water right away. So refreshing!',
-	},
-  {
-		user: 'londonDior',
-		comment: 'Your creativity knows no bounds! Im always excited to see what you come up with next. Keep inspiring us!',
+	{
+		imageUrl: 'https://images.unsplash.com/photo-1493612276216-ee3925520721?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cmFuZG9tfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60',
+		user: USERS[3].user,
+		likes: 7870,
+		caption: 'Invent your world. Surround yourself with people, color, sounds, and work that nourish you.',
+		profilePic: USERS[3].image,
+		comments: [
+			{
+				user: 'Ragnar.Mahlangu5',
+				comment: 'The fashion game is strong in this one! You always manage to slay every outfit. Teach me your style secrets, please!',
+			},
+			{
+				user: 'Manfred.David81',
+				comment: 'fire bro',
+			},
+			{
+				user: 'Bin.Green42',
+				comment: 'This picture is pure art! The composition and colors are absolutely stunning. You have such a great eye for photography!',
+			},
+		]
 	},
 ]
