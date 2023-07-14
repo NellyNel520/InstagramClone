@@ -8,10 +8,18 @@ const Post = ({ post }) => {
 			{/* thin line between post and stories section */}
 			<Divider width={1} orientation="vertical" />
 			<PostHeader post={post} />
+			<PostImage post={post} />
 		</View>
 	)
 }
-
+const PostImage = ({ post }) => (
+	<View style={{ width: '100%', height: 450 }}>
+		<Image
+			source={{ uri: post.imageUrl }}
+			style={{ height: '100%', resizeMode: 'cover' }}
+		/>
+	</View>
+)
 const PostHeader = ({ post }) => (
 	<View
 		style={{
