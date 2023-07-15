@@ -2,6 +2,27 @@ import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native'
 import React from 'react'
 import { Divider } from 'react-native-elements/dist/divider/Divider'
 
+const postFooterIcons = [
+	{
+		name: 'Like',
+		imageUrl: 'https://img.icons8.com/small/16/000000/like--v1.png',
+		likedImageUrl: 'https://img.icons8.com/small/16/000000/filled-like.png',
+	},
+	{
+		name: 'Comment',
+		imageUrl: 'https://img.icons8.com/ios/50/000000/speech-bubble--v1.png',
+	},
+	{
+		name: 'Share',
+		imageUrl: 'https://img.icons8.com/ios/50/000000/speech-bubble--v1.png',
+	},
+	{
+		name: 'Save',
+		imageUrl:
+			'https://img.icons8.com/fluency-systems-regular/48/000000/bookmark-ribbon--v1.png',
+	},
+]
+
 const Post = ({ post }) => {
 	return (
 		<View style={{ marginBottom: 30 }}>
@@ -9,17 +30,13 @@ const Post = ({ post }) => {
 			<Divider width={1} orientation="vertical" />
 			<PostHeader post={post} />
 			<PostImage post={post} />
+			<View style={{ marginHorizontal: 2, marginTop: 10 }}>
+				<PostFooter />
+				<Likes post={post} />
+			</View>
 		</View>
 	)
 }
-const PostImage = ({ post }) => (
-	<View style={{ width: '100%', height: 450 }}>
-		<Image
-			source={{ uri: post.imageUrl }}
-			style={{ height: '100%', resizeMode: 'cover' }}
-		/>
-	</View>
-)
 const PostHeader = ({ post }) => (
 	<View
 		style={{
@@ -42,6 +59,57 @@ const PostHeader = ({ post }) => (
 		</TouchableOpacity>
 	</View>
 )
+const PostImage = ({ post }) => (
+	<View style={{ width: '100%', height: 450 }}>
+		<Image
+			source={{ uri: post.imageUrl }}
+			style={{ height: '100%', resizeMode: 'cover' }}
+		/>
+	</View>
+)
+
+const PostFooter = () => (
+	// Icons
+	<View style={{ flexDirection: 'row' }}>
+		<View style={styles.leftFooterIconContainer}>
+			<TouchableOpacity>
+				<Image
+					style={styles.footerIcon}
+					source={require('../../assets/icons/heart-icon.png')}
+				/>
+			</TouchableOpacity>
+			<TouchableOpacity>
+				<Image
+					style={styles.footerIcon}
+					source={require('../../assets/icons/comment-icon.png')}
+				/>
+			</TouchableOpacity>
+			<TouchableOpacity>
+				<Image
+					style={styles.footerIcon}
+					source={require('../../assets/icons/share-icon.png')}
+				/>
+			</TouchableOpacity>
+		</View>
+
+		<View style={{ flex: 1, alignItems: 'flex-end' }}>
+			<TouchableOpacity>
+				<Image
+					style={styles.footerIcon}
+					source={require('../../assets/icons/save-icon.png')}
+				/>
+			</TouchableOpacity>
+		</View>
+	</View>
+)
+
+const Likes = ({ post }) => (
+	<View style={{ flexDirection: 'row', marginTop: 4,}}>
+		<Text style={{ color: 'white', fontWeight: 600 }}>
+			{post.likes.toLocaleString('en')} likes
+		</Text>
+	</View>
+)
 
 const styles = StyleSheet.create({
 	story: {
@@ -51,6 +119,16 @@ const styles = StyleSheet.create({
 		marginLeft: 6,
 		borderWidth: 1.7,
 		borderColor: '#ff8501',
+	},
+	footerIcon: {
+		width: 33,
+		height: 33,
+		marginRight: 6,
+	},
+	leftFooterIconContainer: {
+		flexDirection: 'row',
+		width: '32%',
+		justifyContent: 'space-between',
 	},
 })
 export default Post

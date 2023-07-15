@@ -24,7 +24,7 @@ export const POSTS = [
 	{
 		imageUrl: 'https://plus.unsplash.com/premium_photo-1669741908308-5ca216f3fcd1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cGVyc29ufGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60',
 		user: USERS[1].user,
-		likes: 7870,
+		likes: 17250,
 		caption: 'Invent your world. Surround yourself with people, color, sounds, and work that nourish you.',
 		profilePic: USERS[1].image,
 		comments: [
@@ -45,7 +45,7 @@ export const POSTS = [
 	{
 		imageUrl: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cGVyc29ufGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60',
 		user: USERS[2].user,
-		likes: 7870,
+		likes: 400,
 		caption: 'Invent your world. Surround yourself with people, color, sounds, and work that nourish you.',
 		profilePic: USERS[2].image,
 		comments: [
