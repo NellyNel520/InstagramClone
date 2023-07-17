@@ -41,15 +41,6 @@ export const bottomTabIcons = [
 	},
 ]
 
-const profileIcon = [
-	{
-		name: 'Profile',
-		active:
-			'https://images.unsplash.com/photo-1577806934037-32d94e326e84?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGhlYWQlMjBzaG90c3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60',
-		inactive:
-			'https://images.unsplash.com/photo-1577806934037-32d94e326e84?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGhlYWQlMjBzaG90c3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60',
-	},
-]
 const BottomTabs = ({ icons }) => {
 	const [activeTab, setActiveTab] = useState('Home')
 
@@ -77,7 +68,7 @@ const BottomTabs = ({ icons }) => {
 						source={{
 							uri: 'https://images.unsplash.com/photo-1577806934037-32d94e326e84?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGhlYWQlMjBzaG90c3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60',
 						}}
-						style={styles.icon}
+						style={[styles.icon, styles.profilePic]}
 					/>
 				</TouchableOpacity>
 			</View>
@@ -87,7 +78,11 @@ const BottomTabs = ({ icons }) => {
 
 const styles = StyleSheet.create({
 	wrapper: {
-
+		position: 'absolute',
+		width: '100%',
+		bottom: '3%',
+		zIndex: 999,
+		backgroundColor: '#000000'
 	},
 	container: {
 		flexDirection: 'row',
@@ -100,6 +95,10 @@ const styles = StyleSheet.create({
 		height: 30,
 		// marginHorizontal: 15,
 	},
+	profilePic: {
+		borderRadius: 50,
+		borderColor: 'white',
+	}
 })
 
 export default BottomTabs
