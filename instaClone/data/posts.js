@@ -11,14 +11,14 @@ export const POSTS = [
 				user: 'Ragnar.Mahlangu5',
 				comment: 'The fashion game is strong in this one! You always manage to slay every outfit. Teach me your style secrets, please!',
 			},
-			{
-				user: 'Manfred.David81',
-				comment: 'fire bro',
-			},
-			{
-				user: 'Bin.Green42',
-				comment: 'This picture is pure art! The composition and colors are absolutely stunning. You have such a great eye for photography!',
-			},
+			// {
+			// 	user: 'Manfred.David81',
+			// 	comment: 'fire bro',
+			// },
+			// {
+			// 	user: 'Bin.Green42',
+			// 	comment: 'This picture is pure art! The composition and colors are absolutely stunning. You have such a great eye for photography!',
+			// },
 		]
 	},
 	{
@@ -28,18 +28,18 @@ export const POSTS = [
 		caption: 'Invent your world. Surround yourself with people, color, sounds, and work that nourish you.',
 		profilePic: USERS[1].image,
 		comments: [
-			{
-				user: 'Ragnar.Mahlangu5',
-				comment: 'The fashion game is strong in this one! You always manage to slay every outfit. Teach me your style secrets, please!',
-			},
-			{
-				user: 'Manfred.David81',
-				comment: 'fire bro',
-			},
-			{
-				user: 'Bin.Green42',
-				comment: 'This picture is pure art! The composition and colors are absolutely stunning. You have such a great eye for photography!',
-			},
+			// {
+			// 	user: 'Ragnar.Mahlangu5',
+			// 	comment: 'The fashion game is strong in this one! You always manage to slay every outfit. Teach me your style secrets, please!',
+			// },
+			// {
+			// 	user: 'Manfred.David81',
+			// 	comment: 'fire bro',
+			// },
+			// {
+			// 	user: 'Bin.Green42',
+			// 	comment: 'This picture is pure art! The composition and colors are absolutely stunning. You have such a great eye for photography!',
+			// },
 		]
 	},
 	{

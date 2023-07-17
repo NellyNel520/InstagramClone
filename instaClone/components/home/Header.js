@@ -14,12 +14,12 @@ const Header = () => {
 
 			<View style={styles.iconsContainer}>
           {/* Add icon */}
-				<TouchableOpacity>
+				{/* <TouchableOpacity>
 					<Image
 						style={styles.icon}
 						source={require('../../assets/icons/add-icon.png')}
 					/>
-				</TouchableOpacity>
+				</TouchableOpacity> */}
           {/* heart icon */}
 				<TouchableOpacity>
 					<Image
@@ -56,7 +56,7 @@ const styles = StyleSheet.create({
 	icon: {
 		width: 30,
 		height: 30,
-		marginLeft: 10,
+		marginLeft: 14,
 		resizeMode: 'contain',
 	},
 	logo: {

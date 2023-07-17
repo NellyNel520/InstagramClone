@@ -33,6 +33,9 @@ const Post = ({ post }) => {
 			<View style={{ marginHorizontal: 2, marginTop: 10 }}>
 				<PostFooter />
 				<Likes post={post} />
+				<Caption post={post} />
+				<CommentSection post={post} />
+				<Comments post={post}/>
 			</View>
 		</View>
 	)
@@ -104,10 +107,45 @@ const PostFooter = () => (
 )
 
 const Likes = ({ post }) => (
-	<View style={{ flexDirection: 'row', marginTop: 4,}}>
+	<View style={{ flexDirection: 'row', marginTop: 4 }}>
 		<Text style={{ color: 'white', fontWeight: 600 }}>
 			{post.likes.toLocaleString('en')} likes
 		</Text>
+	</View>
+)
+
+const Caption = ({ post }) => (
+	<View style={{ marginTop: 5 }}>
+		<Text style={{ color: 'white' }}>
+			<Text style={{ fontWeight: '800' }}>{post.user} </Text>
+			<Text>{post.caption}</Text>
+		</Text>
+	</View>
+)
+
+const CommentSection = ({ post }) => (
+	<View style={{ marginTop: 5 }}>
+		{!!post.comments.length && (
+			<Text style={{ color: 'gray', fontWeight: 600 }}>
+				View {post.comments.length > 1 ? 'all' : ''}
+				{post.comments.length}{' '}
+				{post.comments.length > 1 ? 'comments' : 'comment'}
+			</Text>
+			
+		)}
+	</View>
+)
+
+const Comments = ({post}) => (
+	// need to limit comments to the first 2 in backend comment controller 
+	<View>
+		{post.comments.map((comment, index) => (
+			<View key={index} style={{flexDirection: 'row', marginTop: 3}}>
+				<Text style={{color: 'white'}}>
+					<Text style={{fontWeight: 700}}>{comment.user}</Text>  {comment.comment}
+				</Text>
+			</View>
+		))}
 	</View>
 )
 
