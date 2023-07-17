@@ -19,8 +19,8 @@ export const bottomTabIcons = [
 	},
 	{
 		name: 'Search',
-		active: 'https://img.icons8.com/external-kiranshastry-solid-kiranshastry/64/ffffff/external-search-alignment-and-tools-kiranshastry-solid-kiranshastry.png',
-		inactive: 'https://img.icons8.com/ios-filled/50/ffffff/search--v1.png',
+		active: 'https://img.icons8.com/ios-filled/50/ffffff/search--v1.png',
+		inactive: 'https://img.icons8.com/ios/50/ffffff/search--v1.png',
 	},
 	{
 		name: 'Add',
@@ -47,7 +47,10 @@ const BottomTabs = ({ icons }) => {
 		<TouchableOpacity onPress={() => setActiveTab(icon.name)}>
 			{/* <Image source={icon.inactive} style={styles.icon} /> */}
 			<Image source={{uri: activeTab === icon.name ? icon.active : icon.inactive}} 
-			style={styles.icon} />
+			style={[styles.icon, icon.name === 'Profile' ? styles.profilePic() : null,
+			activeTab === 'Profile' && icon.name === activeTab ? styles.profilePic(activeTab) : null
+			]} />
+			{/* adds profile pic styling only to the profile icon and not the rest */}
 		</TouchableOpacity>
 	)
 
@@ -85,10 +88,11 @@ const styles = StyleSheet.create({
 		height: 30,
 		// marginHorizontal: 15,
 	},
-	profilePic: {
+	profilePic: (activeTab = '') => ({
 		borderRadius: 50,
 		borderColor: 'white',
-	}
+		borderWidth: activeTab === 'Profile' ? 3 : 0,
+	}),
 })
 
 export default BottomTabs
