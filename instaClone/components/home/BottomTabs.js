@@ -26,6 +26,7 @@ export const bottomTabIcons = [
 		name: 'Add',
 		active: 'https://img.icons8.com/ios-filled/50/ffffff/plus-2-math.png',
 		inactive: 'https://img.icons8.com/ios/50/ffffff/plus-2-math.png',
+		nav: 'NewPostScreen'
 	},
 	{
 		name: 'Reels',
@@ -40,11 +41,11 @@ export const bottomTabIcons = [
 	
 ]
 
-const BottomTabs = ({ icons }) => {
+const BottomTabs = ({ icons, navigation }) => {
 	const [activeTab, setActiveTab] = useState('Home')
 
 	const Icon = ({ icon }) => (
-		<TouchableOpacity onPress={() => setActiveTab(icon.name)}>
+		<TouchableOpacity onPress={() => (setActiveTab(icon.name), icon.nav ? navigation.push(icon.nav) : null) }>
 			{/* <Image source={icon.inactive} style={styles.icon} /> */}
 			<Image source={{uri: activeTab === icon.name ? icon.active : icon.inactive}} 
 			style={[styles.icon, icon.name === 'Profile' ? styles.profilePic() : null,

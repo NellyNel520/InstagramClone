@@ -1,7 +1,7 @@
 import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native'
 import React from 'react'
 
-const Header = () => {
+const Header = ({navigation}) => {
 	return (
 		<View style={styles.container}>
     {/* IG text logo */}
@@ -14,12 +14,12 @@ const Header = () => {
 
 			<View style={styles.iconsContainer}>
           {/* Add icon */}
-				{/* <TouchableOpacity>
+				<TouchableOpacity onPress={() => navigation.push('NewPostScreen')}>
 					<Image
 						style={styles.icon}
-						source={require('../../assets/icons/add-icon.png')}
+						source={{uri: 'https://img.icons8.com/ios/50/ffffff/plus-2-math.png'}}
 					/>
-				</TouchableOpacity> */}
+				</TouchableOpacity>
           {/* heart icon */}
 				<TouchableOpacity>
 					<Image
