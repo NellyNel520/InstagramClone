@@ -4,6 +4,7 @@ import * as Yup from 'yup'
 import { Formik } from 'formik'
 import { useState } from 'react'
 import { Divider } from 'react-native-elements'
+import validUrl from 'valid-url'
 
 const PLACEHOLDER_IMG =
 	'https://t3.ftcdn.net/jpg/02/68/55/60/360_F_268556012_c1WBaKFN5rjRxR2eyV33znK4qnYeKZjm.jpg'
@@ -38,7 +39,7 @@ const FormikPostUploader = ({navigation}) => {
 				<>
 					<View style={{ margin: 20, justifyContent: 'space-between', flexDirection: 'row'}}>
 						<Image
-							source={{ uri: thumbnailUrl ? thumbnailUrl : PLACEHOLDER_IMG }}
+							source={{ uri: validUrl.isUri(thumbnailUrl) ? thumbnailUrl : PLACEHOLDER_IMG}}
 							style={{ width: 100, height: 100 }}
 						/>
 
