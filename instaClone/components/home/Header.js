@@ -13,13 +13,8 @@ const Header = ({navigation}) => {
 			</TouchableOpacity>
 
 			<View style={styles.iconsContainer}>
-          {/* Add icon */}
-				<TouchableOpacity onPress={() => navigation.push('NewPostScreen')}>
-					<Image
-						style={styles.icon}
-						source={{uri: 'https://img.icons8.com/ios/50/ffffff/plus-2-math.png'}}
-					/>
-				</TouchableOpacity>
+          
+				
           {/* heart icon */}
 				<TouchableOpacity>
 					<Image

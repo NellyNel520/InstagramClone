@@ -44,6 +44,7 @@ export const bottomTabIcons = [
 const BottomTabs = ({ icons, navigation }) => {
 	const [activeTab, setActiveTab] = useState('Home')
 
+	// BUG *** add icon remains in active state when return to home screen via back button will need to fix **   
 	const Icon = ({ icon }) => (
 		<TouchableOpacity onPress={() => (setActiveTab(icon.name), icon.nav ? navigation.push(icon.nav) : null) }>
 			{/* <Image source={icon.inactive} style={styles.icon} /> */}
